@@ -1,0 +1,27 @@
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.selected {
+    border: 2px solid #F7941C;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 17px rgba(247, 148, 28, 0.35);
+    background-color: #eeeeee;
+
+  }
+}

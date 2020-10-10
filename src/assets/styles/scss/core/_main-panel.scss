@@ -1,0 +1,12 @@
+
+$toolbar: 64px;
+
+
+.app-inner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vh - #{$toolbar});
+}
+
+

@@ -1,0 +1,28 @@
+<div class="card flex-column"
+     [ngClass]="{'selected': homeModel.selected}">
+  <div class="flex-row">
+    <div class="w-50">
+      <img width="95px" src="./assets/images/home.jpg" alt="image">
+    </div>
+
+    <div class="w-50 ml-1">
+      <div class="flex-column jc-space-between h-100">
+        <div class="flex-column">
+          <span class="font-weight-bold">{{homeModel.name}}</span>
+
+
+          <span
+            class="text-sm color-muted mt-1">{{homeModel.distanceFromCenter}} {{'dashboardModule.kilometer.heading' | translate}} {{'dashboardModule.fromCenter.heading' | translate}}</span>
+        </div>
+
+        <div class="flex-column">
+          <span class="text-lg font-weight-bold">{{homeModel.price | currency:'':'£'}}</span>
+          <span class="color-muted text-sm">{{'dashboardModule.design.heading' | translate}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-100 mt-1">
+    <button>{{'dashboardModule.bookButton.heading' | translate}}</button>
+  </div>
+</div>

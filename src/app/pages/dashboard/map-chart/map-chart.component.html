@@ -1,0 +1,28 @@
+<ng-container *ngIf="foundHomes">
+  <agm-map class="h-100"
+           [latitude]="foundHomes[selectedIndex]?.location.lat"
+           [longitude]="foundHomes[selectedIndex]?.location.long"
+           [zoom]="12">
+
+    <agm-marker
+      *ngFor="let home of foundHomes; let i = index"
+      [latitude]="home.location.lat"
+      [longitude]="home.location.long"
+      [iconAnchorX]="10"
+      [iconAnchorY]="10"
+      [iconHeight]="20"
+      [iconWidth]="20"
+      [iconUrl]="home.selected? '/assets/images/icons/home-active.svg': '/assets/images/icons/home.svg'">
+
+    </agm-marker>
+  </agm-map>
+</ng-container>
+
+<div>
+  <div class="card-container w-100 overflow-auto">
+    <app-card *ngFor="let home of foundHomes; let i = index"
+              (click)="toggleSelected(i)"
+              [homeModel]="home">
+    </app-card>
+  </div>
+</div>

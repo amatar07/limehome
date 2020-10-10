@@ -1,0 +1,16 @@
+{
+  "dashboardModule": {
+    "kilometer": {
+      "heading": "KM"
+    },
+    "design": {
+      "heading": "Designs may vary"
+    },
+    "bookButton": {
+      "heading": "Book"
+    },
+    "fromCenter": {
+      "heading": "FROM THE CITY CENTER"
+    }
+  }
+}
